@@ -71,21 +71,3 @@ def get_project_context(project_data):
     for mapping in project_data['apiMappings']:
         context[mapping['prefix']] = mapping['namespace']
     return Context(context)
-
-
-def get_resource_context(context_uri):
-    """Get the context from a project.
-    
-    Arguments
-    ---------
-    bucket : str
-        The name of the project int the format: '{org}/{proj}'
-    
-    Returns
-    -------
-    context: Context
-        An instance of the Context class, an extension of the JSON-LD Context from
-        rdflib. Contains the JSON-LD framed context in `context.document`, as well
-        as the `context.vocab` and `context.base` attributes.
-    """
-    return Context(context_uri)

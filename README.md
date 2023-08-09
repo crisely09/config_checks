@@ -6,6 +6,13 @@ Runing requirements:
 - rdflib
 - urllib
 
+First export your nexus token
+```
+export NEXUS_TOKEN={user_token}
+```
+To provide input variables, modify the `config_diffs.py` file.
+
+To run it do:
 ```
 python config_diffs.py
 ```

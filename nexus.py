@@ -9,6 +9,13 @@ from context import get_project_context
 NEXUS_ENDPOINT= "https://bbp.epfl.ch/nexus/v1"
 
 
+class NexusAttributes:
+    project_metadata = ['_label', '_createdBy', 
+                        '_createdAt', '_updatedAt', '_self',
+                        '_organizationLabel', '_organizationUuid',
+                        '_uuid']
+    
+
 def get_headers(token: str, content_type: str = 'application/json',
                     accept: str = 'application/json') -> dict:
     headers = {'Content-type': content_type,
